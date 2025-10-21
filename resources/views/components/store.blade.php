@@ -2,7 +2,7 @@
     <div class="border-b border-r border-gray-300 text-center p-4">
 
         <div class="aspect-square">
-            <img src="{{$product->image}}" alt="" class="w-full h-full object-center object-cover">
+            <img src="{{ $product->image }}" alt="" class="w-full h-full object-center object-cover">
         </div>
 
         <div class="pt-10 pb-4 px-10">
@@ -11,25 +11,34 @@
             </p>
 
             <h3 class="text-md font-light text-gray-700">
-                {{ $product->nom }}
+                {{ $product->name }}
             </h3>
-            <p class="text-base text-gray-900 mt-3">{{ $product->prix }}€</p>
+            <p class="text-base text-gray-900 mt-3">{{ $product->price }}€</p>
             <div class="flex justify-center space-x-2 mt-4">
                 @php
                     $allowedColors = [
                         'Black' => 'bg-gray-900',
                         'Blue' => 'bg-blue-500',
-                        'Pink' => 'bg-pink-300',
-                        'Green' => 'bg-green-400',
-                        'Yellow' => 'bg-yellow-400',
                         'Silver' => 'bg-gray-300',
-                        'Graphite' => 'bg-gray-700',
-                        'Space Gray' => 'bg-gray-800',
-                        'Purple' => 'bg-purple-400',
-                        'Starlight' => 'bg-yellow-100',
-                        'Red' => 'bg-red-500',
+                        'Purple' => 'bg-purple-500',
+                        'Gray' => 'bg-gray-500',
                         'White' => 'bg-white',
-                        'Midnight' => 'bg-gray-900',
+                        'Red' => 'bg-red-500',
+                        'Green' => 'bg-green-400',
+                        'Pink' => 'bg-pink-400',
+                        'Beige' => 'bg-yellow-100',
+                        'Brown' => 'bg-amber-800',
+                        'Yellow' => 'bg-yellow-400',
+                        'Amber' => 'bg-amber-400',
+                        'Gold' => 'bg-yellow-500',
+                        'Lime' => 'bg-lime-400',
+                        'Blue Light' => 'bg-blue-300',
+                        'Blue Dark' => 'bg-blue-600',
+                        'Gray Light' => 'bg-gray-100',
+                        'Gray Dark' => 'bg-gray-800',
+                        'Green Light' => 'bg-green-300',
+                        'Purple Light' => 'bg-purple-400',
+                        'Amber Dark' => 'bg-amber-700',
                     ];
                 @endphp
                 @foreach ($product->color as $name => $colorKey)

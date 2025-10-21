@@ -10,7 +10,7 @@ class Product extends Model
      use HasFactory;
 
     protected $fillable = [
-        'categorie_id',
+        'category_id',
         'name', 
         'image',
         'description',
