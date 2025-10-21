@@ -14,8 +14,13 @@
 </head>
 
 <body>
-    <x-header/>
+    <x-navigation/>
+    <x-fil-ariane/>
+    <x-hero-section/>
+    <div class="max-w-7xl mx-auto flex">
+    <x-categories/>
     @yield('boutique')
+    </div>
 </body>
 
 </html>
