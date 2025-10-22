@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Boutique</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,9 +17,9 @@
     <x-navigation/>
     <x-fil-ariane/>
     <x-hero-section/>
+    <x-categories :categories="$categories"/>
     <div class="max-w-7xl mx-auto flex">
-    <x-categories/>
-    @yield('boutique')
+        @yield('content')
     </div>
 </body>
 

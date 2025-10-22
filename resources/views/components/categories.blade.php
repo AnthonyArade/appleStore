@@ -1,16 +1,14 @@
-<ul class="block w-1/5 divide-y text-sm font-medium pr-8 pt-8 sticky top-14 bg-white self-start">
-    <li class="py-3 pr-2 flex justify-between items-center">
-        Type de produit
-        <span class="text-gray-400">
-            <i class="fas fa-plus text-[10px] h-3 w-3"></i>
-        </span>
-    </li>
-    <li class="py-3 pr-2 flex justify-between items-center">
-        Compatibilité avec l'iPad
-        <span class="text-gray-400"><i class="fas fa-plus text-[10px] h-3 w-3"></i></span>
-    </li>
-    <li class="py-3 pr-2 flex justify-between items-center">
-        Compatibilité avec l'iPhone
-        <span class="text-gray-400"><i class="fas fa-plus text-[10px] h-3 w-3"></i></span>
-    </li>
-</ul>
+<section class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Nos Produits</h2>
+</section>
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+    <a href="" class="px-6 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition">
+        Tous
+    </a>
+    @foreach ($categories as $category)
+        <a href=""
+            class="px-6 py-2 bg-gray-600 text-white rounded-full font-semibold hover:bg-gray-300 transition">
+            {{ $category->name }}
+        </a>
+    @endforeach
+</div>

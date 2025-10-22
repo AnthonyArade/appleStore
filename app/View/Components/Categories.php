@@ -8,12 +8,13 @@ use Illuminate\View\Component;
 
 class Categories extends Component
 {
+    public $categories;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($categories)
     {
-        //
+        $this->categories = $categories;
     }
 
     /**
