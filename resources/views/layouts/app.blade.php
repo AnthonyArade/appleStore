@@ -18,7 +18,7 @@
     <x-fil-ariane/>
     <x-hero-section/>
     <x-categories :categories="$categories"/>
-    <div class="max-w-7xl mx-auto flex">
+    <div class="mx-auto flex justify-center">
         @yield('content')
     </div>
 </body>

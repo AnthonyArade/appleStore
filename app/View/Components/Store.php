@@ -8,13 +8,13 @@ use Illuminate\View\Component;
 
 class Store extends Component
 {
-    public $products;
+    public $product;
     /**
      * Create a new component instance.
      */
-    public function __construct($products)
+    public function __construct($product)
     {
-        $this->products = $products;
+        $this->product = $product;
     }
 
     /**
