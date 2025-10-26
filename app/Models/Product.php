@@ -16,6 +16,7 @@ class Product extends Model
         'description',
         'new',
         'price',
+        'stock',
         'color',
     ];
 
@@ -23,14 +24,14 @@ class Product extends Model
         'color' => 'array',
     ];
 
-public function getColorAttribute($value)
-{
-    // Decode the JSON stored in the DB
-    $array = json_decode($value, true) ?? [];
-    
-    // Return the full key => value array
-    return $array;
-}
+    public function getColorAttribute($value)
+    {
+        // Decode the JSON stored in the DB
+        $array = json_decode($value, true) ?? [];
+
+        // Return the full key => value array
+        return $array;
+    }
 
 // Convert array of keys back to full JSON with Tailwind classes
     public function setColorAttribute($value)
@@ -72,5 +73,10 @@ public function getColorAttribute($value)
     public function category()
     {
         return $this->belongsTo(category::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 }

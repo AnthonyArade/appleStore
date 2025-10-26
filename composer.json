@@ -9,7 +9,9 @@
         "php": "^8.2",
         "filament/filament": "4.0.0",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "leandrocfe/filament-apex-charts": "4.0",
+        "mokhosh/filament-rating": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

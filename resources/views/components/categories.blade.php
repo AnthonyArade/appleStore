@@ -6,9 +6,13 @@
         Tous
     </a>
     @foreach ($categories as $category)
-        <a href=""
-            class="px-6 py-2 bg-gray-600 text-white rounded-full font-semibold hover:bg-gray-300 transition">
-            {{ $category->name }}
-        </a>
+        <form method="POST" action="{{ route('store.search') }}" class="inline">
+            @csrf
+            <input type="hidden" name="q" value="{{ $category->name }}">
+            <button type="submit"
+                class="px-6 py-2 bg-gray-600 text-white rounded-full font-semibold hover:bg-gray-300 transition">
+                {{ $category->name }}
+            </button>
+        </form>
     @endforeach
 </div>
